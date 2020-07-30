@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Rowdies&display=swap"
+      rel="stylesheet"
+    />
+    <title>kursi panas</title>
+  </head>
+  <body>
+    <h2 class="banner">HOT SEAT</h2>
+
+    <div class="question">
+      <p>Ban apa yang bisa makan, joget, nyanyi, dan ngomong?</p>
+    </div>
+
+    <div id="jawaban">
+      <input type="text" maxlength="01" class="satu" />
+      <input type="text" maxlength="01" class="satu" />
+      <input type="text" maxlength="01" class="satu" />
+      <input type="text" maxlength="01" class="satu" />
+      <input type="text" maxlength="01" class="satu" />
+      <br />
+      <br />
+      <!-- <button type="button" class="button">TEST</button> -->
+    </div>
+    <!-- <div id = "submit">
+        <button type="button">COBA DEH</button>
+    </div> -->
+    <div id="submit">
+      <button type="button" id="button">COBA DEH</button>
+    </div>
+  </body>
+  <footer>
+      <h2>KETAWA LAH MUMPUNG GRATIS</h2>
+      <h3><a href="bayar.html">Mau liat yang lain?</a></h3>
+  </footer>
+</html>
+
+<script>
+   let nama =  prompt('siapa nama anda?')
+  let jawaban = document.getElementsByClassName("satu");
+ 
+  let question = document.getElementsByTagName("p");
+  let pertanyaan1 = "Ban apa yang bisa makan, joget, nyanyi, dan ngomong?";
+  let pertanyaan2 =
+    "Lima huruf, huruf pertama B huruf ketiga A, Binatang hidup di darat dan di air?";
+  let pertanyaan3 = "Bersisik bukan ikan , bermahkota bukan raja , apakah itu?";
+  let menang = `${nama} kamu pasti googling kan buat jawab ini`;
+  console.log(pertanyaan2);
+  let klik = 0;
+
+  button.addEventListener("click", function () {
+    klik += 1;
+    console.log(klik);
+    let str = "";
+    for (let i = 0; i < jawaban.length; i++) {
+      str += jawaban[i].value;
+    }
+    console.log(str);
+
+
+    // PERTANYAAN PERTAMA
+    if (question[0].innerText === pertanyaan1) {
+      if (klik === 3 && str !== "banci") {
+          klik = 0
+        window.alert("salah muluu tong");
+      }
+      if (str === "banci") {
+        question[0].innerText = pertanyaan2;
+
+        for (let i = 0; i < jawaban.length; i++) {
+          jawaban[i].value = "";
+          str = "";
+          klik = 0
+        }
+      } else if (str !== "banci") {
+        for (let i = 0; i < jawaban.length; i++) {
+          jawaban[i].value = "";
+        }
+      }
+
+      // PERTANYAAN KEDUA
+    } else if (question[0].innerText === pertanyaan2) {
+      if (klik === 3 && str !== "biasa") {
+          klik = 0
+        window.alert("salah muluu tong");
+        question[0].innerText = pertanyaan1
+      }
+      if (str === "biasa") {
+        question[0].innerText = pertanyaan3;
+
+        for (let i = 0; i < jawaban.length; i++) {
+          jawaban[i].value = "";
+          str = "";
+          klik = 0
+        }
+      } else if (str !== "biasa") {
+        for (let i = 0; i < jawaban.length; i++) {
+          jawaban[i].value = "";
+        }
+      }
+
+      //PERTANYAAN KETIGA
+    } else if (question[0].innerText === pertanyaan3) {
+      if (klik === 3 && str !== "biasa") {
+          klik = 0
+        window.alert("salah muluu tong");
+        question[0].innerText = pertanyaan1
+      }
+      if (str === "nanas") {
+        for (let i = 0; i < jawaban.length; i++) {
+          jawaban[i].value = "*";
+        }
+
+        question[0].innerText = menang;
+      } else if (str !== "nanas") {
+        for (let i = 0; i < jawaban.length; i++) {
+          jawaban[i].value = "";
+        }
+      }
+    }
+  });
+</script>

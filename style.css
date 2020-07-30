@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: black;
+}
+
+
+.banner{
+    text-align: center;
+    font-family: 'Krona One', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    color: black;
+    background: snow;
+    margin-bottom: 30px;
+    padding: 7px;
+    
+}
+.question{
+    color: snow;
+    font-family: 'Rowdies', cursive;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+
+
+.satu{
+    width: 53px;
+    font-size: 55px;
+    font-weight: 40px;
+    text-align: center;
+   text-transform: uppercase;
+   background-color: black;
+   color: snow;
+   margin-top: 30px;
+   margin-left: 10px;
+   padding: 7px;
+   /* display: inline; */
+   border-radius: 12px;
+   
+}
+
+
+#jawaban {
+    /* width: 450px;
+    height: 200px; */
+    position: absolute;
+    top: 50%;
+    left: 32.5%;
+   
+    }
+
+#submit {
+    text-align: center;
+    margin-top: 20%;
+    
+}
+button{
+    background-color: black;
+    color: snow;
+    font-size: larger;
+    font-family: 'Krona One', sans-serif;
+    height: 40px;
+    
+}
+#submit :hover{
+    color: black;
+    background-color: snow;
+}
+
+footer{
+    background: snow;
+    color: black;
+    font-family: 'Krona One', sans-serif;
+    text-align: center;
+    
+}
+footer h2 {
+    margin-top: 30px;
+    
+}
+
+h3 a{
+    color: blue;
+}
+h3 a:hover{
+    color: red;
+}
+
+
